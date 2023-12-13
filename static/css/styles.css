@@ -29,14 +29,14 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 70px;
-  color: #00ff80;
+  color: #ff004f;
   display: none;
 }
 .back-to-top > a {
-  color: #00ff80;
+  color: #ff004f;
 }
 .back-to-top:hover {
-  background-color: #00ff80;
+  background-color: #ff004f;
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
@@ -68,7 +68,7 @@ nav {
   transition: background-color 0.5s ease-in-out;
 }
 .logo-text {
-  background: -webkit-linear-gradient(#00bcf4, #4536ec);
+  background: -webkit-linear-gradient(#1fe90cef, rgba(14, 228, 103, 0.863));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -93,7 +93,7 @@ nav ul li a::after {
   content: "";
   width: 0%;
   height: 3px;
-  background: #00ff80;
+  background: #ff004f;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -116,7 +116,7 @@ nav.scrolled {
   margin-top: 20px;
 }
 .header-text h1 span {
-  color: #00ff80;
+  color: #ff004f;
 }
 
 /*------About-------*/
@@ -139,7 +139,7 @@ nav.scrolled {
 }
 .about-col-1 img {
   width: 100%;
-  margin-top: 100px;
+  margin-top: -100px;
   border-radius: 15px;
 }
 
@@ -178,7 +178,7 @@ nav.scrolled {
   content: "";
   width: 0%;
   height: 3px;
-  background: #00ff80;
+  background: #ff004f;
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -192,7 +192,7 @@ nav.scrolled {
   margin: 10px 0;
 }
 .tab-contents ul li span {
-  color: #00ff80;
+  color: #ff004f;
   font-weight: 700;
   font-size: 22px;
   line-height: 2rem;
@@ -255,7 +255,7 @@ nav.scrolled {
   width: 100%;
 }
 .projects-list div:hover {
-  background-color: #00ff80;
+  background-color: #ff004f;
   transform: translateY(-10px);
 }
 
@@ -275,7 +275,7 @@ nav.scrolled {
 }
 
 .contact-left p i {
-  color: #00ff80;
+  color: #ff004f;
   margin-right: 15px;
   font-size: 25px;
 }
@@ -291,14 +291,14 @@ nav.scrolled {
   transition: transform 0.5s;
 }
 .social-icons a:hover {
-  color: #00ff80;
+  color: #ff004f;
   transform: translateY(-5px);
 }
 .btn {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #00ff80;
+  border: 1px solid #ff004f;
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
@@ -307,16 +307,16 @@ nav.scrolled {
   transition: all ease 0.3s;
 }
 .btn:hover {
-  background: #00ff80;
+  background: #ff004f;
 }
 .btn.btn2 {
   display: inline-block;
-  background: #00ff80;
-  border: 3px solid #00ff80;
+  background: #ff004f;
+  border: 3px solid #ff004f;
   
 }
 .btn2:hover{
-  color: #00ff80;
+  color: #ff004f;
   background-color: white;
 
 }
@@ -397,7 +397,7 @@ nav .fas {
     font-size: 25px;
   }
   nav ul {
-    background: #00ff8094;
+    background: #ff004f;
     position: fixed;
     top: 0;
     right: -200px;
@@ -428,7 +428,7 @@ nav .fas {
     flex-basis: 100%;
   }
   .about-col-1 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   .about-col-2 {
     font-size: 14px;
@@ -449,7 +449,7 @@ nav .fas {
   }
 }
 #msg {
-  color: #00ff80;
+  color: #61b752;
   margin-top: -40px;
   display: block;
 }
