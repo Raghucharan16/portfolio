@@ -3,16 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> N.Venkata Raghu Charan </title>
+    <title>NVRC'S Portfolio</title>
+    <link rel="stylesheet" href="./static/css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./public/favicons/android-chrome-512x512.png"
+    />
+    <script
+      src="https://kit.fontawesome.com/f6f6dc9eec.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Scroll to Top ⬆️ -->
+    <script src="./static/js/scrollToTop.js" defer></script>
   </head>
   <body>
-    <h1>
-        Hi, I'm
-        <span class="name">N.V.Raghu <br />Charan</span> From India.
-    </h1>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <p class="logo-text">N.Venkata Raghu Charan</p>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#review">Review</a></li>
+            <li><a href="https://nvrc.hashnode.dev/">Writes at</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          
+          <h1>
+            Hi, I'm
+            <span class="name">N.V.<br />Raghu Charan</span> 
+            
+          </h1>
+          <p>Tech Enthusiast</p>
+        </div>
+      </div>
+    </div>
+
     <!----------------------------About----------------------------->
     <div id="about">
-      
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img
+              class="img007"
+              src="./assets/images/Profile/Photo-to-use.png" 
+            />
           </div>
           <div class="about-col-2 animate-entry-1">
             <h1 class="sub-title">About Me</h1>
@@ -21,13 +63,17 @@
 
             <p id ="self_info">
 
-              "Hi, I'm N.Venkata Raghu Charan. I'm a student pursuing a Bachelor of
+              "Hi, I'm Venkata Raghu Charan Narra. I'm a student pursuing Bachelor of
               Technology in Computer Science and Engineering with data science.
-              I've been passionate about coding and exploring open source
-              applications. I'm excited to continue learning and growing in my studies
-              and development skills. I have some experience in cloud computing and studied
-              multiple cloud service providers and their services. Intrested in DevOps and 
-              Machine Learning Projects. I'm currently working on End to End ML Project."
+              I've been passionate about coding and experimenting OSS on Android and windows.
+              I'm excited to continue learning and growing in my studies and development
+              skills. With expertise in classical Machine Learning and Deep Learning 
+              Algorithms, I've built some projects [models] which can be used for different
+              Use Cases. I've experience in cloud computing, Android, DevOps and some frontend
+              {HTML,CSS,JS}, Moving to the back end, I'm familiar with databases like MongoDB
+               and MySQL. If you're looking for a motivated OSS based and skilled tech enthusiast,
+                I'd love to connect and discuss how can I can contribute to your team or project."
+              
             </p>
             <div class="tab-titles">
               <div class="tab-links active-link" onclick="opentab('skills')">
@@ -37,39 +83,272 @@
                 Education
               </div>
               <div class="tab-links" onclick="opentab('experience')">
-                Experience
+                Positions Served
               </div>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                
+                <li><span>Programming Languages</span><br />C, C++, Java, Python, R</li>
+                <li>
+                  <span>Web Development</span><br />HTML5, CSS3,
+                  JavaScript, MySQL, MongoDB, Flask
+                </li>
+                <li>
+                  <span>Tools and Frameworks</span><br /> Git, Docker, K8's, GCP, AWS, Android Studio, VSCode, Streamlit, Jupyter
+                </li>
               </ul>
             </div>
             <div class="tab-contents" id="education">
               <ul>
                 <li>
-                  <span>B.tech in CSE</span><br />Gayatri Vidya Parishad
-                  College of Engineering <br />Cgpa:8.8
+                  <span>B.tech in CSE with Data Science</span><br />Gayatri Vidya Parishad College
+                  of Engineering<br />CGPA: 9.06
                 </li>
                 <li>
                   <span>Intermediate</span><br />Sri Chaitanya Jr College
-                  <br />Grade:96%
+                  <br />Grade: 96%
                 </li>
                 <li>
-                  <span>10th Class</span><br />Vignan High School
-                  <br />Grade:95%
+                  <span>10th Standard</span><br />Vignan High School
+                  <br />Grade: 95%
                 </li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
               <ul>
-                
+                <li><span>Core Volunteer</span><br />Google Developer Groups, Vizag</li>
+                <li>
+                  <span>Google Cloud Facilitator</span><br />GDSC_GVP, Visakhapatnam
+                </li>
+                <li>
+                  <span>DevOps Lead</span><br />GDSC_GVP Chapter, Visakhapatnam
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-------------------------------Projects----------------------------->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list animate-entry-1">
+          <div>
+            <i class="fa-solid fa-signature"></i>
+            <h2>Signature Verification Using DTW</h2>
+            <p class="p-007">
+              This is Streamlit based web application which enables users to register 
+              themselves and process thier own work. it takes 2 signatures as input 
+              and checks whether they belong to same person or not by DTW Dynamic
+              time wrapping Algorithm.
+            <a
+              href="https://github.com/Raghucharan16/Signature_verification#readme" target="_blank"
+              ><span style="font-size: 22px;">View Project</span></a
+            ><br>
+            <a href="https://github.com/Raghucharan16/Signature_verification" target="_blank"
+              ><span style="font-size: 22px;">View Code</span></a
+            >
+          </div>
+          <div>
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h2>Kovida</h2>
+            <p class="p-007">
+              This is a Medical Insurance Price Prediction web application built
+              with the help of Streamlit. It takes attributes of user like age and
+              previuos health records and predicts the amount of insurance that is
+              feasible to both client and Organization.
+            </p>
+            <a
+              href="https://github.com/Raghucharan16/health-insurance#readme" target="_blank"
+              ><span style="font-size: 22px;">View Project</span></a
+            ><br>
+            <a href="https://github.com/Raghucharan16/health-insurance" target="_blank"
+              ><span style="font-size: 22px;">View Code</span></a
+            >
+          </div>
+          <div>
+            <i class="fa-solid fa-hand"></i>
+            <h2>Hand Digit Recognition with CNN</h2>
+            <p class="p-007">
+              This is a simple CNN application with tensorflowjs which 
+              shows a canvas and allows users to draw numbers which are
+              to be predicted and displyed through bar chart with confidence.
+            </p>
+            <a
+              href="https://raghucharan16.github.io/Hand-Written-Digit-Recognition/" target="_blank"
+              ><span style="font-size: 22px;">View Project</span></a
+            ><br>
+            <a
+              href="https://github.com/Raghucharan16/Hand-Written-Digit-Recognition" target="_blank"
+              ><span style="font-size: 22px;">View Code</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
 
-    
+    <!-----------------------------Contact Us-------------------------->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-envelope"></i><a class="email" href="mailto:narravenkataraghucharan03@gmail.com">narravenkataraghucharan03@gmail.com</a> 
+            </p>
+
+            <div class="social-icons">
+              <a href="https://twitter.com/Nvraghucharan16" target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i></a> 
+              <a href="https://www.instagram.com/nvraghucharan/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/narra-venkata-raghu-charan/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/raghucharan16" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+            <a href="./assets/docs/resume.pdf" download class="btn btn2 "
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right animate-entry-1">
+            <form name="submit-to-google-sheet">
+              <input
+                type="text"
+                name="Name"
+                placeholder="Your Good Name.."
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email..."
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message..."
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <!---------------------------- Review ----------------------------------->
+      <section id="review">
+        <div class="container">
+          <h2 class="under sub-title">Review</h2>
+          <br>
+          <form action="#">
+              <h3 style="font-size: 30px;">Your reviews here:</h3>
+              <textarea id="review-section" name="review" placeholder="Write here"></textarea>
+              <button type="submit" class="submit-button btn btn2" onclick="thanking();">Submit</button>
+          </form>
+          <div id="thanks"></div>
+        </div>
+
+      </section>
+      <!-- My btn -->
+      <button class="back-to-top hidden-top-btn">
+        <a href="#header"><i class="fa-solid fa-arrow-up fa-xl"></i></a>
+      </button>
+      <div class="copyright">
+        <p>
+          Made with <i class="fa-solid fa-heart"></i> from India.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxH5fxfqQLK9QR05D20SKhSxipraz0xHX-FsiWRiLW0UL9nRH9WckUCHoCCEKWqE7GcSg/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML =
+              "ThankYou. Your Message has been sent Successfully.";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("scrolled", window.scrollY > 0);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slideInElement = document.querySelectorAll(".animate-entry-1");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active-animation");
+              // observer.unobserve(entry);
+            }
+          });
+        });
+        slideInElement.forEach((el) => observer.observe(el));
+      });
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://raghucharan16.github.io/",
+        "@type": "Portfolio Website",
+        "name": "N.Venkata Raghu Charan",
+        "author": {
+          "@type": "Person",
+          "name": "N.Venkata Raghu Charan"
+        },
+        "datePublished": "2023-12-20",
+        "description": "Hello World!!",
+        "prepTime": "PT20M"
+      }
+    </script>
+    <script>
+      function thanking(){
+          document.getElementById("thanks").innerHTML="Thanks for your review!!";
+
+      }
+  </script>
   </body>
+</html>
