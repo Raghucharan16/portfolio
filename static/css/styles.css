@@ -22,6 +22,33 @@ body {
   background-size: cover;
   background-position: center;
 }
+.circular-image-container {
+  width: 400px; 
+  height: 400px;
+  border-radius: 50%; 
+  overflow: hidden; 
+  margin-right: 20px; 
+  background-color: #ff004f;
+}
+
+.circular-image-container img {
+  width:max-content; 
+  height: 500px; 
+  display: block; 
+  border-radius: 50%; 
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .circular-image-container {
+    width: 50%; 
+    max-width: none; 
+  }
+}
+@media (max-width: 568px) and (orientation: landscape) {
+  .circular-image-container {
+    width: 90%; /* Adjust the width for mobile landscape */
+  }
+}
 .back-to-top {
   position: fixed;
   right: 1rem;
