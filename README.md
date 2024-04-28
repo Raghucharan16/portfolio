@@ -26,10 +26,3 @@ This repository showcases my personal portfolio website, built with HTML, CSS, a
 **Contact:**
 
 [feel free to reach out @narravenkataraghucharan@gmail.com]
-
-**Additional Information:**
-
-* You can replace `Your Portfolio Website` with an actual, unique name for your project.
-* Modify the features list to accurately reflect the functionalities of your portfolio.
-* Update the contact information with your details.
-* Consider adding a link to a live demo or deployment if you have one.
