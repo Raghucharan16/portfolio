@@ -1,210 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N.V. Raghu Charan | Data Engineer</title>
+    <title>N.V. Raghu Charan | Data & AI Engineer</title>
     <style>
+        /* --- CSS VARIABLES FOR THEMES --- */
         :root {
-            --bg-color: #0f172a; /* Slate 900 */
-            --card-bg: #1e293b;   /* Slate 800 */
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent: #38bdf8;    /* Sky Blue */
-            --highlight: #818cf8; /* Indigo */
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-secondary: #555555;
+            --card-bg: #f3f4f6;
+            --accent: #2563eb; /* Blue */
+            --border: #e5e7eb;
+            --code-font: 'Courier New', Courier, monospace;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        [data-theme="dark"] {
+            --bg-color: #0d1117; /* GitHub Dark Dimmed style */
+            --text-main: #e6edf3;
+            --text-secondary: #8b949e;
+            --card-bg: #161b22;
+            --accent: #58a6ff; /* GitHub Blue */
+            --border: #30363d;
         }
 
+        /* --- GLOBAL STYLES --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.3s, color 0.3s; }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-primary);
+            color: var(--text-main);
             line-height: 1.6;
             padding: 0 20px;
         }
 
-        /* Layout Container */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
+        a { text-decoration: none; color: var(--accent); }
+        a:hover { text-decoration: underline; }
 
-        /* Header */
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 0; }
+
+        /* --- HEADER & NAV --- */
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 60px;
-            border-bottom: 1px solid #334155;
+            border-bottom: 1px solid var(--border);
             padding-bottom: 20px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            color: var(--text-primary);
+        .nav-links a { margin-left: 20px; font-weight: 500; color: var(--text-secondary); }
+        .nav-links a:hover { color: var(--accent); }
+
+        .theme-toggle {
+            background: none; border: 1px solid var(--border);
+            color: var(--text-main); padding: 5px 10px;
+            cursor: pointer; border-radius: 5px; font-size: 0.9rem;
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent);
-            font-family: monospace;
-            margin-top: 10px;
+        /* --- HERO SECTION --- */
+        .hero { display: flex; align-items: center; gap: 40px; margin-bottom: 80px; }
+        
+        .hero-text h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero-text h2 { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 20px; font-weight: normal; }
+        
+        .profile-img {
+            width: 150px; height: 150px;
+            border-radius: 50%; object-fit: cover;
+            border: 3px solid var(--accent);
+            background-color: var(--card-bg); /* Fallback */
         }
 
-        /* Navigation */
-        nav {
-            margin-top: 20px;
+        .btn {
+            display: inline-block; background-color: var(--accent);
+            color: #fff !important; padding: 10px 20px;
+            border-radius: 6px; font-weight: 600; text-decoration: none;
+        }
+        .btn:hover { opacity: 0.9; text-decoration: none; }
+
+        /* --- SECTIONS --- */
+        section { margin-bottom: 60px; }
+        .section-title {
+            font-size: 1.5rem; border-left: 4px solid var(--accent);
+            padding-left: 15px; margin-bottom: 25px; color: var(--text-main);
         }
 
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin-right: 20px;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        /* Sections */
-        section {
-            margin-bottom: 60px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            border-left: 4px solid var(--highlight);
-            padding-left: 15px;
-            margin-bottom: 25px;
-            color: var(--text-primary);
-        }
-
-        /* Experience & Projects Cards */
+        /* --- CARDS (Experience & Projects) --- */
         .card {
             background-color: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #334155;
-            transition: transform 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            border-color: var(--accent);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-
-        .role {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: var(--highlight);
-        }
-
-        .company {
-            color: var(--text-primary);
-        }
-
-        .date {
-            font-family: monospace;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        ul {
-            list-style-position: inside;
-            color: #cbd5e1;
-            margin-top: 10px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        /* Skills Tags */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background-color: #334155;
-            color: var(--accent);
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 0.9rem;
-        }
-
-        /* Open Source Section specifically */
-        .repo-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Footer / Contact */
-        .contact-btn {
-            display: inline-block;
-            background-color: var(--highlight);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
+            border: 1px solid var(--border);
+            border-radius: 8px; padding: 20px; margin-bottom: 20px;
         }
         
-        .contact-btn:hover {
-            background-color: var(--accent);
+        .card-header {
+            display: flex; justify-content: space-between; align-items: baseline;
+            flex-wrap: wrap; margin-bottom: 10px;
         }
 
+        .role { font-weight: bold; font-size: 1.1rem; color: var(--text-main); }
+        .company { color: var(--accent); }
+        .date { font-family: var(--code-font); font-size: 0.85rem; color: var(--text-secondary); }
+
+        ul { margin-left: 20px; color: var(--text-secondary); }
+        li { margin-bottom: 8px; }
+
+        /* --- SKILLS TAGS --- */
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag {
+            background-color: var(--card-bg); border: 1px solid var(--border);
+            padding: 5px 12px; border-radius: 20px; font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* --- OPEN SOURCE SPECIAL --- */
+        .os-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .os-repo { font-family: var(--code-font); font-weight: bold; }
+
+        /* --- FOOTER --- */
+        footer { text-align: center; margin-top: 80px; color: var(--text-secondary); font-size: 0.9rem; }
+
+        /* --- MOBILE TWEAKS --- */
+        @media (max-width: 600px) {
+            .hero { flex-direction: column-reverse; text-align: center; }
+            .card-header { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <h1>N.V. Raghu Charan</h1>
-            <div class="subtitle">Data Engineer | Python Dev | Open Source Contributor</div>
-            <p style="margin-top: 15px; color: var(--text-secondary); max-width: 600px;">
-                Building scalable AI/DL solutions, Experienced in AWS Services, Computer Vision.
-            </p>
-            <nav>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#opensource">Open Source</a>
-                <a href="#skills">Skills</a>
-                <a href="mailto:narravenkataraghucharan03@gmail.com" style="color: var(--accent);">Email Me</a>
-            </nav>
+            <div style="font-weight: bold; font-size: 1.2rem;">N.V. Raghu Charan</div>
+            <div class="nav-links">
+                <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()">☀ Light</button>
+            </div>
         </header>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Data & AI Engineer</h1>
+                <h2>Specializing in RAG, Computer Vision, and Scalable ML Solutions.</h2>
+                <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap;">
+                    <a href="assets/docs/Resume.pdf" class="btn" target="_blank">Download Resume</a>
+                    
+                    <a href="https://github.com/Raghucharan16" target="_blank">GitHub</a>
+                    <a href="mailto:narravenkataraghucharan03@gmail.com">Email</a>
+                    <a href="https://linkedin.com/in/raghucharan16" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <img src="assets/images/profile/profile_pic.png" alt="Profile Picture" class="profile-img">
+        </section>
+
+        <section>
+            <div class="section-title">Experience</div>
 
             <div class="card">
                 <div class="card-header">
                     <span class="role">Data & AI Engineer</span>
-                    <span class="company">Freshbus, Hyderabad</span>
+                    <span class="company">Freshbus</span>
                     <span class="date">Sep 2024 - Present</span>
                 </div>
                 <ul>
-                    <li>Developed an automated customer service bot using a <strong>RAG Agent</strong> (OpenAI, ChromaDB, Vanna), reducing ticket resolution time by 40%.</li>
+                    <li>Developed an automated customer service bot using a RAG Agent (OpenAI, ChromaDB, Vanna), reducing ticket resolution time by 40%.</li>
                     <li>Built scheduling software for dynamic fleet expansion, creating dashboards that improved decision-making speed by 30%.</li>
                 </ul>
             </div>
@@ -212,11 +171,11 @@
             <div class="card">
                 <div class="card-header">
                     <span class="role">SDE-1</span>
-                    <span class="company">MoveInSync, Bangalore</span>
+                    <span class="company">MoveInSync</span>
                     <span class="date">Apr 2024 - Aug 2024</span>
                 </div>
                 <ul>
-                    <li>Built a facial recognition attendance system with OpenCV and Insight Face for real-time tracking with 95%+ precision.</li>
+                    <li>Built a facial recognition attendance system with OpenCV and Insight Face for real-time employee tracking with 95%+ precision.</li>
                     <li>Integrated cloud-based pipelines for secure, real-time attendance.</li>
                 </ul>
             </div>
@@ -228,78 +187,107 @@
                     <span class="date">May 2024 - Jun 2024</span>
                 </div>
                 <ul>
-                    <li>Designed a CNN model achieving 96% accuracy on MNIST using IBM's AI Hardware Kit.</li>
+                    <li>Designed a CNN model achieving 96% accuracy on MNIST using IBM's AI Hardware Kit (aihwkit).</li>
                     <li>Benchmarked neuromorphic vs. traditional inference, achieving 15% less computation.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
+        <section>
+            <div class="section-title">Projects</div>
 
             <div class="card">
                 <div class="card-header">
                     <span class="role">RAG Agent Chatbot</span>
+                    <a href="https://github.com/Raghucharan16" class="date">View Code &rarr;</a>
                 </div>
-                <p style="color: #cbd5e1; margin-bottom: 10px;">Domain-specific Retrieval-Augmented Generation chatbot using Vanna, ChromaDB, and OpenAI.</p>
-                <ul>
-                    <li>Reduced query retrieval latency by 20% via optimized embeddings.</li>
-                </ul>
-                <a href="#" class="repo-link">View on GitHub &rarr;</a>
+                <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                    Domain-specific Retrieval-Augmented Generation chatbot using Vanna, ChromaDB, and OpenAI. Reduced query retrieval latency by 20% via optimized embeddings.
+                </p>
             </div>
 
             <div class="card">
                 <div class="card-header">
                     <span class="role">Synthetic Image Generation (GANs)</span>
+                    <a href="https://github.com/Raghucharan16" class="date">View Code &rarr;</a>
                 </div>
-                <p style="color: #cbd5e1; margin-bottom: 10px;">PyTorch pipeline for dataset augmentation and GAN-based synthetic image creation.</p>
-                <ul>
-                    <li>Improved model generalization in low-data vision tasks by 10%</li>
-                </ul>
-                <a href="#" class="repo-link">View on GitHub &rarr;</a>
+                <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                    PyTorch pipeline for dataset augmentation and GAN-based synthetic image creation. Improved model generalization in low-data vision tasks by 10%.
+                </p>
             </div>
-        </section>
 
-        <section id="opensource">
-            <h2>Open Source Contributions</h2>
             <div class="card">
-                <p style="color: #cbd5e1;">Active contributor to major Computer Vision libraries.</p>
-                <ul style="margin-top: 15px;">
-                    <li><strong>DeepFace:</strong> Added Buffalo-L model support.</li>
-                    <li><strong>Insight Face:</strong> Added Face Recognition script implementation.</li>
-                    <li><strong>GSSOC:</strong> Mentor & DevOps Lead for GDSC GVPCE</li>
-                </ul>
+                <div class="card-header">
+                    <span class="role">EV Bus Scheduling Optimization</span>
+                    <a href="https://github.com/Raghucharan16" class="date">View Code &rarr;</a>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                    Optimization system using OR-Tools for EV bus scheduling. Generated HTML tables and JSON outputs for visualization and integration.
+                </p>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Technical Stack</h2>
-            <div class="skills-container">
+        <section>
+            <div class="section-title">Open Source & Community</div>
+            <div class="card">
+                <div class="os-item">
+                    <span class="os-repo">DeepFace:</span>
+                    <span style="color: var(--text-secondary);">Added Buffalo-L model support.</span>
+                </div>
+                <div class="os-item">
+                    <span class="os-repo">Insight Face:</span>
+                    <span style="color: var(--text-secondary);">Added Face Recognition script implementation.</span>
+                </div>
+                <div class="os-item">
+                    <span class="os-repo">GSSOC Mentor:</span>
+                    <span style="color: var(--text-secondary);">DevOps Lead for GDSC GVPCE.</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">PyTorch</span>
                 <span class="skill-tag">TensorFlow</span>
-                <span class="skill-tag">RAG / LangChain</span>
+                <span class="skill-tag">RAG</span>
                 <span class="skill-tag">OpenCV</span>
-                <span class="skill-tag">AWS & GCP</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">GCP</span>
                 <span class="skill-tag">Docker</span>
-                <span class="skill-tag">SQL / PostgreSQL</span>
-                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">SQL</span>
                 <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">OR-Tools</span>
             </div>
         </section>
 
-        <section style="text-align: center; margin-top: 80px;">
-            <h2 style="border: none; padding: 0;">Let's Connect</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                I am currently working on scaling AI solutions. Feel free to reach out for collaborations.
-            </p>
-            <a href="mailto:narravenkataraghucharan03@gmail.com" class="contact-btn">Send Email</a>
-            <div style="margin-top: 20px; font-size: 0.9rem; color: var(--text-secondary);">
-                <a href="#" style="color: var(--text-secondary); margin: 0 10px;">GitHub</a> | 
-                <a href="#" style="color: var(--text-secondary); margin: 0 10px;">LinkedIn</a>
-            </div>
-        </section>
+        <footer>
+            <p>&copy; 2025 N.V. Raghu Charan. Built with secure, form-free HTML/CSS.</p>
+        </footer>
     </div>
 
+    <script>
+        const htmlEl = document.documentElement;
+        const themeBtn = document.getElementById('theme-btn');
+
+        // Check local storage or default to dark
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        htmlEl.setAttribute('data-theme', currentTheme);
+        updateButtonText(currentTheme);
+
+        function toggleTheme() {
+            const current = htmlEl.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            
+            htmlEl.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateButtonText(next);
+        }
+
+        function updateButtonText(theme) {
+            themeBtn.innerText = theme === 'dark' ? '☀ Light Mode' : '🌙 Dark Mode';
+        }
+    </script>
 </body>
 </html>
