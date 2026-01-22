@@ -1,350 +1,880 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NVRC'S Portfolio</title>
-    <link rel="stylesheet" href="./static/css/styles.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./public/favicons/android-chrome-512x512.png"
-    />
-    <script
-      src="https://kit.fontawesome.com/f6f6dc9eec.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Scroll to Top ⬆️ -->
-    <script src="./static/js/scrollToTop.js" defer></script>
-  </head>
-  <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <p class="logo-text">N.Venkata Raghu Charan</p>
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#review">Review</a></li>
-            <li><a href="https://nvrc.hashnode.dev/">Writes at</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
-          </ul>
-          <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-          <p style="background-image: url('assests/images/Background-design-desktop.png');">
-          
-          <h1>
-            Hi, I'm
-            <span class="name">N.V.<br />Raghu Charan</span> 
-            
-          </h1>
-          <p>Data Engineer</p>
-        </div>
-      </div>
-    </div>
-
-    <!----------------------------About----------------------------->
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="circular-image-container about-col-1">
-            <img
-              class="img007"
-              src="assets/images/profile/profile_pic.png" 
-            />
-          </div>
-          <div class="about-col-2 animate-entry-1">
-            <h1 class="sub-title">About Me</h1>
-
-            <p class="p-007">
-
-            <p id ="self_info">
-
-              "Hi, I'm Venkata Raghu Charan Narra. I'm working as a Data Engineer at Freshbus.
-              I've been passionate about Machine Learning Stuff and experimenting OSS on Android and windows.
-              I'm excited to continue learning and growing in my studies and development
-              skills. With expertise in classical Machine Learning and Deep Learning 
-              Algorithms, I've built some projects [models] which can be used for different
-              Use Cases. I've experience in cloud computing, Android, DevOps and some frontend
-              {HTML,CSS,JS}, Moving to the back end, I'm familiar with databases like MongoDB, Postgres, ClickHouse
-               and MySQL. If you're looking for a motivated OSS based and skilled tech enthusiast,
-                I'd love to connect and discuss how can I can contribute to your team or project."
-              
-            </p>
-            <div class="tab-titles">
-              <div class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </div>
-              <div class="tab-links" onclick="opentab('education')">
-                Education
-              </div>
-              <div class="tab-links" onclick="opentab('experience')">
-                Experience
-              </div>
-            </div>
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li><span>Programming Languages</span><br />C, C++, Java, Python, R</li>
-                <li>
-                  <span>Web Development</span><br />HTML5, CSS3,
-                  JavaScript, MySQL, MongoDB, Flask, FastAPI, postman
-                </li>
-                <li>
-                  <span>Tools and Frameworks</span><br /> Git, Docker, K8's, GCP, AWS, Android Studio, VSCode, Streamlit, Jupyter, jenkins
-                </li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="education">
-              <ul>
-                <li>
-                  <span>B.tech in CSE with Data Science</span><br />Gayatri Vidya Parishad College
-                  of Engineering(A)<br />CGPA: 9.1
-                </li>
-                <li>
-                  <span>Intermediate</span><br />Sri Chaitanya Jr College
-                  <br />Grade: 96%
-                </li>
-                <li>
-                  <span>10th Standard</span><br />Vignan High School
-                  <br />Grade: 95%
-                </li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="experience">
-              <ul>
-                <li><span>Data Engineer</span><br />FreshBus, Hyderabad</li>
-                <li>
-                <li><span>SDE-1</span><br />MoveInSync, Bangalore</li>
-                <li>
-                  <span>Research Intern</span><br />IIT, Madras
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-------------------------------Projects----------------------------->
-    <div id="projects">
-      <div class="container">
-        <h1 class="sub-title">Projects</h1>
-        <div class="projects-list animate-entry-1">
-          <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Student Marks Prediction App</h2>
-            <p class="p-007">
-              This project is inspired from krish naik's end to end implementation of ml project.
-              It predicts the student's marks based on given parameters such as
-              gender, hostel, other subject marks etc.All the code was written in modular way maintaining industry standards</p>
-            <a
-              href="https://github.com/Raghucharan16/DSProject#readme" target="_blank"
-              ><span style="font-size: 22px;">View Project</span></a
-            ><br>
-            <a href="https://github.com/Raghucharan16/DSProject" target="_blank"
-              ><span style="font-size: 22px;">View Code</span></a
-            >
-          </div>
-          <div>
-            <i class="fa-solid fa-heart-pulse"></i>
-            <h2>Synthetic Image Generation using GAN's</h2>
-            <p class="p-007">
-              This project is based on GAN's which are responsible in generating images and helps in efficient model
-              training which may be helpful in many use cases like medical diagnosis, and tasks with limited data.
-              Here we have used pneumonia dataset for predicting cancer. GAN's generates images and those were trained for better model performance.
-            </p>
-            <a
-              href="https://github.com/Raghucharan16/SyntheticImageGeneration#readme" target="_blank"
-              ><span style="font-size: 22px;">View Project</span></a
-            ><br>
-            <a href="https://github.com/Raghucharan16/SyntheticImageGeneration" target="_blank"
-              ><span style="font-size: 22px;">View Code</span></a
-            >
-          </div>
-          <div>
-            <i class="fa-solid fa-newspaper"></i>
-            <h2>Telegram Question Paper Bot</h2>
-            <p class="p-007">
-              This is simple telegram bot which can provide previous years question papers of our college GVPCE based on request of user
-              such as branch, year of study and subject. this was developed using Pymongo so that papers can be fetched from mongodb in realtime.
-            </p>
-            <a
-              href="https://github.com/Raghucharan16/GVPCE-Bot?tab=readme-ov-file#readme" target="_blank"
-              ><span style="font-size: 22px;">View Project</span></a
-            ><br>
-            <a
-              href="https://github.com/Raghucharan16/GVPCE-Bot" target="_blank"
-              ><span style="font-size: 22px;">View Code</span></a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-----------------------------Contact Us-------------------------->
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p>
-              <i class="fa-solid fa-envelope"></i><a class="email" href="mailto:narravenkataraghucharan03@gmail.com">narravenkataraghucharan03@gmail.com</a> 
-            </p>
-
-            <div class="social-icons">
-              <a href="https://twitter.com/Nvraghucharan16" target="_blank"
-                ><i class="fa-brands fa-x-twitter"></i></a> 
-              <a href="https://www.instagram.com/nvraghucharan/" target="_blank"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/narra-venkata-raghu-charan/"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a href="https://github.com/raghucharan16" target="_blank"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-            <a href="./assets/docs/Resume.pdf" download class="btn btn2 "
-              >Download CV</a
-            >
-          </div>
-          <div class="contact-right animate-entry-1">
-            <form name="submit-to-google-sheet">
-              <input
-                type="text"
-                name="Name"
-                placeholder="Your Good Name.."
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email..."
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message..."
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
-          </div>
-        </div>
-      </div>
-      <!---------------------------- Review ----------------------------------->
-      <section id="review">
-        <div class="container">
-          <h2 class="under sub-title">Review</h2>
-          <br>
-          <form action="#">
-              <h3 style="font-size: 30px;">Your reviews here:</h3>
-              <textarea id="review-section" name="review" placeholder="Write here"></textarea>
-              <button type="submit" class="submit-button btn btn2" onclick="thanking();">Submit</button>
-          </form>
-          <div id="thanks"></div>
-        </div>
-
-      </section>
-      <!-- My btn -->
-      <button class="back-to-top hidden-top-btn">
-        <a href="#header"><i class="fa-solid fa-arrow-up fa-xl"></i></a>
-      </button>
-      <div class="copyright">
-        <p>
-          Made with <i class="fa-solid fa-heart"></i> from India.
-        </p>
-      </div>
-    </div>
-
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raghu Charan - Data & AI Engineer specializing in ML, DL, RAG systems">
+    <title>N.V. Raghu Charan | Data & AI Engineer</title>
+    <link rel="icon" type="image/png" href="./public/favicons/android-chrome-512x512.png">
+    <script src="https://kit.fontawesome.com/f6f6dc9eec.js" crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #667eea; --secondary: #764ba2; --text: #1e293b;
+            --text-light: #64748b; --bg: #ffffff; --bg-secondary: #f8fafc;
+            --card-bg: #ffffff; --border: #e2e8f0; --shadow: rgba(0,0,0,0.1);
         }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
+        
+        [data-theme="dark"] {
+            --text: #f1f5f9; --text-light: #cbd5e1; --bg: #0f172a;
+            --bg-secondary: #1e293b; --card-bg: #1e293b; --border: #334155;
+            --shadow: rgba(0,0,0,0.3);
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-    </script>
-    <script>
-      var sidemenu = document.getElementById("sidemenu");
-      function openmenu() {
-        sidemenu.style.right = "0";
-      }
-      function closemenu() {
-        sidemenu.style.right = "-200px";
-      }
-    </script>
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxH5fxfqQLK9QR05D20SKhSxipraz0xHX-FsiWRiLW0UL9nRH9WckUCHoCCEKWqE7GcSg/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML =
-              "ThankYou. Your Message has been sent Successfully.";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
-    <script>
-      window.addEventListener("scroll", function () {
-        var nav = document.querySelector("nav");
-        nav.classList.toggle("scrolled", window.scrollY > 0);
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const slideInElement = document.querySelectorAll(".animate-entry-1");
-
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("active-animation");
-              // observer.unobserve(entry);
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text); line-height: 1.6; background: var(--bg);
+            transition: all 0.3s ease;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header {
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000;
+        }
+        
+        [data-theme="dark"] header { background: rgba(15,23,42,0.95); }
+        
+        nav {
+            display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem; font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex; gap: 2rem; list-style: none; align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text); text-decoration: none; font-weight: 500;
+            position: relative; transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--primary); }
+        
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+            background: var(--primary); transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after { width: 100%; }
+        
+        .theme-toggle {
+            background: var(--bg-secondary); border: 1px solid var(--border);
+            border-radius: 50px; padding: 0.5rem 0.75rem; cursor: pointer;
+            font-size: 1.2rem; transition: transform 0.3s;
+        }
+        
+        .theme-toggle:hover { transform: scale(1.1); }
+        
+        .mobile-menu-btn {
+            display: none; background: none; border: none; font-size: 1.5rem;
+            cursor: pointer; color: var(--text);
+        }
+        
+        .hero {
+            padding: 8rem 0 6rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; position: relative; overflow: hidden;
+        }
+        
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float { to { transform: translateY(-100px); } }
+        
+        .hero-content {
+            position: relative; z-index: 1; display: flex;
+            align-items: center; gap: 4rem;
+        }
+        
+        .hero-text { flex: 1; }
+        
+        .hero h1 {
+            font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800; line-height: 1.2;
+        }
+        
+        .hero .name {
+            background: linear-gradient(to right, #fff, #f093fb);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem; margin-bottom: 1.5rem; opacity: 0.95; font-weight: 600;
+        }
+        
+        .hero p { font-size: 1.1rem; max-width: 600px; margin-bottom: 2rem; opacity: 0.9; }
+        
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        
+        .hero-image { flex: 0 0 300px; }
+        
+        .circular-image-container {
+            width: 300px; height: 300px; border-radius: 50%; overflow: hidden;
+            border: 5px solid rgba(255,255,255,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: float-image 3s ease-in-out infinite;
+        }
+        
+        @keyframes float-image {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .circular-image-container img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .btn {
+            padding: 0.875rem 2rem; border-radius: 50px; text-decoration: none;
+            font-weight: 600; transition: all 0.3s; display: inline-block;
+            border: none; cursor: pointer;
+        }
+        
+        .btn-primary { background: white; color: var(--primary); }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent; color: white; border: 2px solid white;
+        }
+        
+        .btn-secondary:hover { background: white; color: var(--primary); }
+        
+        .social-icons { display: flex; gap: 1rem; margin-top: 1.5rem; }
+        
+        .social-icons a {
+            width: 45px; height: 45px; background: rgba(255,255,255,0.2);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; color: white; font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: white; color: var(--primary); transform: translateY(-5px);
+        }
+        
+        section { padding: 5rem 0; }
+        
+        .section-title {
+            font-size: 2.5rem; margin-bottom: 3rem; text-align: center;
+            color: var(--text); position: relative; padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 100px; height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        #about { background: var(--bg-secondary); }
+        
+        .about-content {
+            display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;
+        }
+        
+        .about-image { position: sticky; top: 100px; }
+        
+        .about-text {
+            background: var(--card-bg); padding: 2.5rem; border-radius: 16px;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+        
+        #self_info {
+            font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: var(--text-light);
+        }
+        
+        .tab-titles {
+            display: flex; gap: 1rem; margin-bottom: 2rem; border-bottom: 2px solid var(--border);
+        }
+        
+        .tab-links {
+            padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: var(--text-light);
+            transition: all 0.3s; border-bottom: 3px solid transparent; margin-bottom: -2px;
+        }
+        
+        .tab-links:hover, .tab-links.active-link {
+            color: var(--primary); border-bottom-color: var(--primary);
+        }
+        
+        .tab-contents { display: none; }
+        .tab-contents.active-tab { display: block; }
+        
+        .tab-contents ul { list-style: none; }
+        
+        .tab-contents li {
+            padding: 1rem 0; border-bottom: 1px solid var(--border);
+        }
+        
+        .tab-contents li:last-child { border-bottom: none; }
+        
+        .tab-contents span {
+            color: var(--primary); font-weight: 600; font-size: 1.1rem;
+        }
+        
+        .timeline {
+            max-width: 900px; margin: 0 auto; position: relative; padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        .timeline-item {
+            background: var(--card-bg); padding: 2rem; border-radius: 12px;
+            margin-bottom: 2rem; margin-left: 2rem; box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s; position: relative;
+        }
+        
+        .timeline-item::before {
+            content: ''; position: absolute; left: -3rem; top: 2rem; width: 20px; height: 20px;
+            background: var(--primary); border-radius: 50%; border: 4px solid var(--bg);
+            box-shadow: 0 0 0 4px var(--border);
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(10px); box-shadow: 0 10px 30px var(--shadow);
+        }
+        
+        .timeline-header {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            margin-bottom: 1rem; flex-wrap: wrap;
+        }
+        
+        .timeline-title { font-size: 1.5rem; color: var(--text); font-weight: 700; }
+        
+        .timeline-company { color: var(--primary); font-weight: 600; margin-bottom: 0.25rem; }
+        
+        .timeline-date {
+            color: var(--text-light); font-size: 0.9rem; background: var(--bg-secondary);
+            padding: 0.25rem 0.75rem; border-radius: 20px;
+        }
+        
+        .timeline-item ul { list-style: none; }
+        
+        .timeline-item li {
+            padding-left: 1.5rem; position: relative; margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+        
+        .timeline-item li:before {
+            content: "▹"; position: absolute; left: 0; color: var(--primary);
+            font-weight: bold; font-size: 1.2rem;
+        }
+        
+        #projects { background: var(--bg-secondary); }
+        
+        .projects-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--card-bg); border-radius: 16px; padding: 2.5rem;
+            transition: all 0.3s; border: 1px solid var(--border);
+            box-shadow: 0 5px 20px var(--shadow); position: relative; overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transform: scaleX(0); transition: transform 0.3s;
+        }
+        
+        .project-card:hover::before { transform: scaleX(1); }
+        
+        .project-card:hover {
+            transform: translateY(-10px); box-shadow: 0 15px 40px var(--shadow);
+        }
+        
+        .project-icon { font-size: 3rem; color: var(--primary); margin-bottom: 1rem; }
+        
+        .project-title {
+            font-size: 1.5rem; margin-bottom: 1rem; color: var(--text); font-weight: 700;
+        }
+        
+        .project-description {
+            color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7;
+        }
+        
+        .project-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+        
+        .project-link {
+            color: var(--primary); text-decoration: none; font-weight: 600;
+            display: flex; align-items: center; gap: 0.5rem; transition: gap 0.3s;
+        }
+        
+        .project-link:hover { gap: 0.75rem; }
+        
+        .skills-container { max-width: 1000px; margin: 0 auto; }
+        
+        .skill-category {
+            background: var(--card-bg); padding: 2rem; border-radius: 16px;
+            margin-bottom: 2rem; box-shadow: 0 5px 20px var(--shadow);
+        }
+        
+        .skill-category h3 {
+            font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--text);
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        
+        .skill-category h3 i { color: var(--primary); }
+        
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        
+        .skill-tag {
+            background: var(--bg-secondary); padding: 0.5rem 1.25rem; border-radius: 25px;
+            border: 2px solid var(--border); transition: all 0.3s; font-weight: 500;
+        }
+        
+        .skill-tag:hover {
+            background: var(--primary); color: white; border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        #contact { background: var(--bg-secondary); }
+        
+        .contact-content {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+            max-width: 1000px; margin: 0 auto;
+        }
+        
+        .contact-info h3 { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--text); }
+        
+        .contact-item {
+            display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;
+            padding: 1rem; background: var(--card-bg); border-radius: 12px;
+            transition: transform 0.3s;
+        }
+        
+        .contact-item:hover { transform: translateX(10px); }
+        
+        .contact-item i { font-size: 1.5rem; color: var(--primary); }
+        
+        .contact-item a { color: var(--text); text-decoration: none; }
+        
+        form {
+            background: var(--card-bg); padding: 2.5rem; border-radius: 16px;
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+        
+        form input, form textarea {
+            width: 100%; padding: 1rem; margin-bottom: 1.5rem; border: 2px solid var(--border);
+            border-radius: 8px; background: var(--bg); color: var(--text);
+            font-family: inherit; font-size: 1rem; transition: border-color 0.3s;
+        }
+        
+        form input:focus, form textarea:focus {
+            outline: none; border-color: var(--primary);
+        }
+        
+        form textarea { resize: vertical; min-height: 150px; }
+        
+        #msg, #thanks {
+            display: block; margin-top: 1rem; color: var(--primary);
+            font-weight: 600; font-size: 1.1rem;
+        }
+        
+        #review { padding: 4rem 0; }
+        
+        .back-to-top {
+            position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.2rem; cursor: pointer; transition: all 0.3s;
+            z-index: 999; border: none; box-shadow: 0 5px 20px var(--shadow);
+        }
+        
+        .back-to-top:hover { transform: translateY(-5px); }
+        
+        .back-to-top.hidden-top-btn { opacity: 0; pointer-events: none; }
+        
+        .back-to-top a { color: white; text-decoration: none; }
+        
+        footer {
+            background: var(--bg-secondary); padding: 2rem 0; text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        
+        footer p { color: var(--text-light); }
+        footer i { color: #e74c3c; }
+        
+        .animate-entry-1 {
+            opacity: 0; transform: translateY(30px); transition: all 0.6s ease;
+        }
+        
+        .animate-entry-1.active-animation { opacity: 1; transform: translateY(0); }
+        
+        @media (max-width: 968px) {
+            .hero-content { flex-direction: column-reverse; text-align: center; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-image { flex: 0 0 250px; }
+            .circular-image-container { width: 250px; height: 250px; margin: 0 auto; }
+            .about-content, .contact-content { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .nav-links {
+                position: fixed; right: -100%; top: 70px; flex-direction: column;
+                background: var(--card-bg); width: 200px; padding: 2rem 1rem;
+                border-radius: 12px; box-shadow: 0 10px 30px var(--shadow);
+                transition: right 0.3s;
             }
-          });
-        });
-        slideInElement.forEach((el) => observer.observe(el));
-      });
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://raghucharan16.github.io/",
-        "@type": "Portfolio Website",
-        "name": "N.Venkata Raghu Charan",
-        "author": {
-          "@type": "Person",
-          "name": "N.Venkata Raghu Charan"
-        },
-        "datePublished": "2023-12-20",
-        "description": "Hello World!!",
-        "prepTime": "PT20M"
-      }
-    </script>
-    <script>
-      function thanking(){
-          document.getElementById("thanks").innerHTML="Thanks for your review!!";
+            .nav-links.active { right: 20px; }
+            .mobile-menu-btn { display: block; }
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+            .timeline { padding-left: 1rem; }
+            .timeline-item { margin-left: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <p class="logo-text">N.V. Raghu Charan</p>
+            <ul class="nav-links" id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://nvrc.hashnode.dev/" target="_blank">Blog</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
 
-      }
-  </script>
-  </body>
-</html>
+    <section class="hero" id="header">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="name">N.V. Raghu Charan</span></h1>
+                    <p class="subtitle">Data & AI Engineer</p>
+                    <p>Delivering scalable Machine Learning, Deep Learning, and AI solutions. Specialized in RAG systems, Computer Vision, and building production-ready AI applications.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                        <a href="./assets/docs/Resume.pdf" download class="btn btn-secondary">Download CV</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/Raghucharan16/GVPCE-Bot" class="project-link" target="_blank">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-container animate-entry-1">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages & Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">R</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI/ML & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">FAISS</span>
+                        <span class="skill-tag">OR-Tools</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">ClickHouse</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">K8s</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Jenkins</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content animate-entry-1">
+                <div class="contact-info">
+                    <h3>Contact Me</h3>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">
+                        I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out!
+                    </p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:narravenkataraghucharan03@gmail.com">narravenkataraghucharan03@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919948075663">+91 99480 75663</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hyderabad, India</span>
+                    </div>
+                    <div class="social-icons" style="justify-content: flex-start; margin-top: 2rem;">
+                        <a href="https://github.com/raghucharan16" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/narra-venkata-raghu-charan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/Nvraghucharan16" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/nvraghucharan/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="./assets/docs/Resume.pdf" download class="btn btn-primary" style="margin-top: 2rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">Download CV</a>
+                </div>
+                <div class="contact-form">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">Send Message</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="review">
+        <div class="container">
+            <h2 class="section-title">Leave a Review</h2>
+            <form style="max-width: 700px; margin: 0 auto;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text);">Your feedback matters!</h3>
+                <textarea id="review-section" name="review" placeholder="Share your thoughts..." style="min-height: 120px;"></textarea>
+                <button type="submit" class="btn btn-primary" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;" onclick="thanking()">Submit Review</button>
+            </form>
+            <div id="thanks"></div>
+        </div>
+    </section>
+
+    <button class="back-to-top hidden-top-btn" id="backToTop">
+        <a href="#header"><i class="fas fa-arrow-up"></i></a>
+    </button>
+
+    <footer>
+        <div class="container">
+            <p>Made with <i class="fas fa-heart"></i> from India | © 2026 N.V. Raghu Charan</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.querySelector('.theme-toggle i');
+            const currentTheme = html.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                html.removeAttribute('data-theme');
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+            }
+        });
+
+        // Tab functionality
+        function opentab(tabname) {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
+            
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const sidemenu = document.getElementById("sidemenu");
+            sidemenu.classList.toggle("active");
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById("sidemenu").classList.remove("active");
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxH5fxfqQLK9QR05D20SKhSxipraz0xHX-FsiWRiLW0UL9nRH9WckUCHoCCEKWqE7GcSg/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById('msg');
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Thank you! Your message has been sent successfully.";
+                    setTimeout(() => msg.innerHTML = "", 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+
+        // Review submission
+        function thanking() {
+            event.preventDefault();
+            document.getElementById("thanks").innerHTML = "Thanks for your review!";
+            setTimeout(() => {
+                document.getElementById("thanks").innerHTML = "";
+                document.getElementById("review-section").value = "";
+            }, 5000);
+        }
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('hidden-top-btn');
+            } else {
+                backToTop.classList.add('hidden-top-btn');
+            }
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active-animation');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-entry-1').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>Raghucharan16/SyntheticImageGeneration" class="project-link" target="_blank">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <i class="project-icon fas fa-bus"></i>
+                    <h3 class="project-title">EV Bus Scheduling</h3>
+                    <p class="project-description">
+                        Optimization system using OR-Tools for EV bus scheduling, maximizing occupancy while adhering to operational constraints with HTML and JSON outputs.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raghucharan16" class="project-link" target="_blank">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <i class="project-icon fas fa-graduation-cap"></i>
+                    <h3 class="project-title">Student Marks Prediction</h3>
+                    <p class="project-description">
+                        End-to-end ML project predicting student marks based on parameters like gender, hostel, other subject marks. Built with modular code following industry standards.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raghucharan16/DSProject" class="project-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/Raghucharan16/DSProject" class="project-link" target="_blank">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <i class="project-icon fas fa-telegram"></i>
+                    <h3 class="project-title">Telegram QP Bot</h3>
+                    <p class="project-description">
+                        Telegram bot providing previous years question papers for GVPCE based on branch, year, and subject. Developed with PyMongo for real-time MongoDB queries.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raghucharan16/GVPCE-Bot" class="project-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/raghucharan16" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/narra-venkata-raghu-charan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/Nvraghucharan16" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/nvraghucharan/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="circular-image-container">
+                        <img src="assets/images/profile/profile_pic.png" alt="Raghu Charan">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content animate-entry-1">
+                <div class="about-image">
+                    <div class="circular-image-container">
+                        <img src="assets/images/profile/profile_pic.png" alt="Raghu Charan">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p id="self_info">
+                        Hi, I'm Venkata Raghu Charan Narra. I'm working as a Data Engineer at Freshbus. I've been passionate about Machine Learning and experimenting with OSS on Android and Windows. With expertise in classical Machine Learning and Deep Learning algorithms, I've built projects and models for different use cases. I have experience in cloud computing, Android, DevOps, and frontend technologies. On the backend, I'm familiar with databases like MongoDB, Postgres, ClickHouse, and MySQL. If you're looking for a motivated, skilled tech enthusiast, I'd love to connect and discuss how I can contribute to your team or project.
+                    </p>
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                        <div class="tab-links" onclick="opentab('certifications')">Certifications</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python, C/C++, Java, JavaScript, R, SQL</li>
+                            <li><span>AI/ML & Frameworks</span><br>PyTorch, TensorFlow, LangChain, OpenCV, Scikit-learn, FAISS</li>
+                            <li><span>Web & Tools</span><br>FastAPI, Flask, HTML/CSS, Docker, K8s, GCP, AWS, Git</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech CSE (Data Science)</span><br>Gayatri Vidya Parishad College of Engineering (A)<br>CGPA: 9.1/10</li>
+                            <li><span>Intermediate</span><br>Sri Chaitanya Jr College<br>Grade: 96%</li>
+                            <li><span>10th Standard</span><br>Vignan High School<br>Grade: 95%</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Google Cloud Career Practitioner</span></li>
+                            <li><span>AWS Cloud Foundations</span></li>
+                            <li><span>Python Gold Badge - HackerRank</span></li>
+                            <li><span>Android Development with Kotlin - Google</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline animate-entry-1">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">Freshbus, Hyderabad</div>
+                            <h3 class="timeline-title">Data & AI Engineer</h3>
+                        </div>
+                        <span class="timeline-date">Sep 2024 – Present</span>
+                    </div>
+                    <ul>
+                        <li>Developed automated customer service bot using RAG Agent (OpenAI, ChromaDB, Vanna), reducing ticket resolution time by 40%</li>
+                        <li>Built scheduling software for dynamic fleet expansion, improving decision-making speed by 30%</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">MoveInSync, Bangalore</div>
+                            <h3 class="timeline-title">SDE-1</h3>
+                        </div>
+                        <span class="timeline-date">Apr 2024 – Aug 2024</span>
+                    </div>
+                    <ul>
+                        <li>Built facial recognition attendance system with OpenCV and InsightFace achieving 95%+ precision</li>
+                        <li>Integrated cloud-based pipelines for secure, real-time attendance tracking</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">IIT Madras (Remote)</div>
+                            <h3 class="timeline-title">Software Intern</h3>
+                        </div>
+                        <span class="timeline-date">May 2024 – Jun 2024</span>
+                    </div>
+                    <ul>
+                        <li>Designed CNN model achieving 96% accuracy on MNIST using IBM's AI Hardware Kit</li>
+                        <li>Benchmarked neuromorphic vs. traditional inference, achieving 15% less computation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid animate-entry-1">
+                <div class="project-card">
+                    <i class="project-icon fas fa-robot"></i>
+                    <h3 class="project-title">RAG Agent Chatbot</h3>
+                    <p class="project-description">
+                        Domain-specific Retrieval-Augmented Generation chatbot using Vanna, ChromaDB, and OpenAI. Reduced query retrieval latency by 20% via optimized embeddings.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raghucharan16" class="project-link" target="_blank">View Code <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <i class="project-icon fas fa-image"></i>
+                    <h3 class="project-title">Synthetic Image Generation</h3>
+                    <p class="project-description">
+                        PyTorch pipeline for GAN-based synthetic image creation. Improved model generalization in low-data vision tasks by 10% using synthetic samples.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Raghucharan16/SyntheticImageGeneration" class="project-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/
