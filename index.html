@@ -1,313 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raghu Charan | Data & AI Engineer</title>
-  <meta name="description" content="Portfolio of Narra Venkata Raghu Charan – Data & AI Engineer specializing in ML, RAG systems, and Computer Vision." />
+  <title>N.V.RaghuCharan | Data & AI Engineer</title>
+  <meta name="description"
+    content="Portfolio of N.V.RaghuCharan – Data & AI Engineer specializing in Machine Learning, RAG systems, Computer Vision, and scalable AI solutions." />
+  <meta name="author" content="N.V.RaghuCharan" />
+  <meta name="keywords"
+    content="Data Engineer, AI Engineer, Machine Learning, Computer Vision, RAG, Python, PyTorch, TensorFlow" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="N.V.RaghuCharan | Data & AI Engineer" />
+  <meta property="og:description" content="Data & AI Engineer specializing in ML, RAG systems, and Computer Vision" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="public/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="public/favicons/android-chrome-512x512.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #0b0f19;
-      --card: #12172a;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --primary: #6366f1;
-      --accent: #22d3ee;
-      --border: rgba(255,255,255,0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,0.15), transparent),
-                  radial-gradient(800px 500px at 90% 10%, rgba(34,211,238,0.12), transparent),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 32px 20px 80px;
-    }
-
-    /* Header */
-    header {
-      display: grid;
-      gap: 24px;
-      margin-bottom: 64px;
-    }
-
-    .hero {
-      display: grid;
-      gap: 16px;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 6vw, 52px);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    .btn {
-      padding: 10px 16px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
-      color: var(--text);
-      font-weight: 500;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-    }
-
-    .btn.primary {
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      color: #020617;
-      border: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      border-color: rgba(255,255,255,0.2);
-    }
-
-    /* Sections */
-    section {
-      margin-bottom: 64px;
-    }
-
-    section h2 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      letter-spacing: -0.01em;
-    }
-
-    .grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    .grid.two {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
-    }
-
-    .card h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .card ul {
-      margin-top: 10px;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .card ul li {
-      margin-bottom: 6px;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(99,102,241,0.15);
-      color: #c7d2fe;
-      margin: 4px 6px 0 0;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 80px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    footer a {
-      color: var(--text);
-    }
-  </style>
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="static/css/base.css">
+  <link rel="stylesheet" href="static/css/navigation.css">
+  <link rel="stylesheet" href="static/css/hero.css">
+  <link rel="stylesheet" href="static/css/components.css">
+  <link rel="stylesheet" href="static/css/footer.css">
 </head>
-<body>
-  <div class="container">
 
-    <!-- Header / Hero -->
-    <header>
-      <div class="hero">
-        <h1>Hi, I'm <span>Raghu Charan</span></h1>
-        <p>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-left">
+        <div class="nav-logo-container">
+          <img src="public/favicons/android-chrome-192x192.png" alt="NVRC Logo" class="nav-logo-img">
+        </div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label">👋 Welcome to my portfolio</div>
+        <h1>Hi, I'm <span class="gradient-text">N.V.RaghuCharan</span></h1>
+        <p class="hero-description">
           Data & AI Engineer focused on building scalable Machine Learning, Computer Vision,
-          and Retrieval‑Augmented Generation systems — from idea to production.
+          and Retrieval-Augmented Generation systems — from idea to production.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="mailto:narravenkataraghucharan03@gmail.com">Contact Me</a>
-          <a class="btn" href="https://github.com/Raghucharan16" target="_blank">GitHub</a>
-          <a class="btn" href="#projects">Projects</a>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="https://github.com/Raghucharan16" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">View GitHub</a>
+          <a href="assets/docs/Resume.pdf" target="_blank" class="btn btn-secondary">Download Resume</a>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <!-- Experience -->
-    <section>
-      <h2>Experience</h2>
-      <div class="grid two">
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Career Journey</div>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-description">
+          Building innovative AI solutions across startups and research institutions
+        </p>
+      </div>
+
+      <div class="card-grid">
         <div class="card">
-          <h3>Data & AI Engineer — Freshbus</h3>
-          <p>Sep 2024 – Present · Hyderabad</p>
-          <ul>
-            <li>Built a domain‑specific RAG chatbot using OpenAI, ChromaDB, and Vanna, reducing ticket resolution time by 40%.</li>
-            <li>Developed fleet scheduling software with analytics dashboards, improving decision‑making speed by 30%.</li>
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Data & AI Engineer</h3>
+              <div class="card-subtitle">Freshbus</div>
+            </div>
+          </div>
+          <div class="card-meta">Sep 2024 – Present · Hyderabad, India</div>
+          <ul class="card-list">
+            <li>Built a domain-specific RAG chatbot using OpenAI, ChromaDB, and Vanna, reducing ticket resolution time
+              by 40%</li>
+            <li>Developed fleet scheduling software with analytics dashboards, improving decision-making speed by 30%
+            </li>
+            <li>Implemented real-time data pipelines for operational insights and predictive maintenance</li>
           </ul>
+          <div class="tags">
+            <span class="tag">RAG</span>
+            <span class="tag">OpenAI</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">FastAPI</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>SDE‑1 — MoveInSync</h3>
-          <p>Apr 2024 – Aug 2024 · Bangalore</p>
-          <ul>
-            <li>Implemented real‑time facial recognition attendance using OpenCV and InsightFace with 95%+ precision.</li>
-            <li>Integrated secure cloud pipelines for trip‑level attendance tracking.</li>
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Software Development Engineer - 1</h3>
+              <div class="card-subtitle">MoveInSync</div>
+            </div>
+          </div>
+          <div class="card-meta">Apr 2024 – Aug 2024 · Bangalore, India</div>
+          <ul class="card-list">
+            <li>Implemented real-time facial recognition attendance using OpenCV and InsightFace with 95%+ precision
+            </li>
+            <li>Integrated secure cloud pipelines for trip-level attendance tracking across multiple client deployments
+            </li>
+            <li>Optimized computer vision models for edge deployment, reducing inference latency by 35%</li>
           </ul>
+          <div class="tags">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">InsightFace</span>
+            <span class="tag">AWS</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>Software Intern — IIT Madras</h3>
-          <p>May 2024 – Jun 2024 · Remote</p>
-          <ul>
-            <li>Designed a CNN achieving 96% accuracy on MNIST using IBM AI Hardware Kit (aihwkit).</li>
-            <li>Benchmarked neuromorphic inference, reducing computation by ~15%.</li>
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Software Engineering Intern</h3>
+              <div class="card-subtitle">IIT Madras</div>
+            </div>
+          </div>
+          <div class="card-meta">May 2024 – Jun 2024 · Remote</div>
+          <ul class="card-list">
+            <li>Designed a CNN achieving 96% accuracy on MNIST using IBM AI Hardware Kit (aihwkit)</li>
+            <li>Benchmarked neuromorphic inference, reducing computation by ~15% through analog computing</li>
+            <li>Researched energy-efficient neural network architectures for edge AI applications</li>
           </ul>
+          <div class="tags">
+            <span class="tag">Deep Learning</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Neuromorphic Computing</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <div class="grid two">
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-description">
+          Innovative solutions leveraging AI, optimization, and computer vision
+        </p>
+      </div>
+
+      <div class="card-grid">
         <div class="card">
-          <h3>RAG Agent Chatbot</h3>
-          <p>Domain‑specific chatbot leveraging structured databases and LLMs.</p>
-          <ul>
-            <li>Vanna, ChromaDB, OpenAI, FastAPI</li>
+          <h3 class="card-title">RAG Agent Chatbot</h3>
+          <p class="card-description">
+            Domain-specific chatbot leveraging structured databases and large language models
+            for intelligent query resolution and automated support.
+          </p>
+          <ul class="card-list">
+            <li>Implemented using Vanna, ChromaDB, OpenAI, and FastAPI</li>
             <li>Reduced query latency by 20% via optimized embeddings</li>
+            <li>Achieved 40% improvement in ticket resolution time</li>
           </ul>
+          <div class="tags">
+            <span class="tag">LangChain</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">OpenAI</span>
+            <span class="tag">FastAPI</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>EV Bus Scheduling Optimization</h3>
-          <p>Optimization engine for electric bus operations.</p>
-          <ul>
-            <li>Google OR‑Tools, Python</li>
-            <li>Constraint‑based scheduling with HTML & JSON outputs</li>
+          <h3 class="card-title">EV Bus Scheduling Optimization</h3>
+          <p class="card-description">
+            Constraint-based optimization engine for electric bus fleet operations,
+            maximizing efficiency while considering battery constraints and route planning.
+          </p>
+          <ul class="card-list">
+            <li>Built with Google OR-Tools and Python</li>
+            <li>Constraint-based scheduling with HTML & JSON outputs</li>
+            <li>Improved operational efficiency by 30%</li>
           </ul>
+          <div class="tags">
+            <span class="tag">OR-Tools</span>
+            <span class="tag">Python</span>
+            <span class="tag">Optimization</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>Synthetic Image Generation (GANs)</h3>
-          <p>Data augmentation pipeline for low‑data vision tasks.</p>
-          <ul>
-            <li>PyTorch, GAN architectures</li>
+          <h3 class="card-title">Synthetic Image Generation (GANs)</h3>
+          <p class="card-description">
+            Data augmentation pipeline using Generative Adversarial Networks for
+            low-data computer vision tasks, improving model generalization.
+          </p>
+          <ul class="card-list">
+            <li>Implemented with PyTorch and custom GAN architectures</li>
             <li>Improved generalization accuracy by ~10%</li>
+            <li>Generated high-quality synthetic training data</li>
           </ul>
+          <div class="tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">GANs</span>
+            <span class="tag">Computer Vision</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Real-Time Facial Recognition System</h3>
+          <p class="card-description">
+            Production-grade facial recognition system for automated attendance tracking
+            with high accuracy and low latency performance.
+          </p>
+          <ul class="card-list">
+            <li>Achieved 95%+ precision using InsightFace and OpenCV</li>
+            <li>Deployed on edge devices with optimized inference</li>
+            <li>Integrated with cloud pipelines for scalability</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">OpenCV</span>
+            <span class="tag">InsightFace</span>
+            <span class="tag">Edge AI</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills -->
-    <section>
-      <h2>Skills</h2>
-      <div class="card">
-        <div>
-          <span class="tag">Python</span>
-          <span class="tag">PyTorch</span>
-          <span class="tag">TensorFlow</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">Flask</span>
-          <span class="tag">LangChain</span>
-          <span class="tag">OpenCV</span>
-          <span class="tag">FAISS</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">Redis</span>
-          <span class="tag">AWS</span>
-          <span class="tag">GCP</span>
-          <span class="tag">Docker</span>
-          <span class="tag">OR‑Tools</span>
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Technical Expertise</div>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-description">
+          Comprehensive toolkit for building end-to-end AI and data solutions
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming & Frameworks</h3>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Flask</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>AI & Machine Learning</h3>
+          <div class="tags">
+            <span class="tag">LangChain</span>
+            <span class="tag">OpenAI</span>
+            <span class="tag">RAG Systems</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">InsightFace</span>
+            <span class="tag">GANs</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Databases & Vector Stores</h3>
+          <div class="tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Redis</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">FAISS</span>
+            <span class="tag">Pinecone</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Cloud & DevOps</h3>
+          <div class="tags">
+            <span class="tag">AWS</span>
+            <span class="tag">GCP</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Optimization & Tools</h3>
+          <div class="tags">
+            <span class="tag">OR-Tools</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Jupyter</span>
+            <span class="tag">MLflow</span>
+            <span class="tag">Weights & Biases</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-      <div>© 2026 Narra Venkata Raghu Charan</div>
-      <div>
-        <a href="mailto:narravenkataraghucharan03@gmail.com">Email</a> ·
-        <a href="https://github.com/Raghucharan16" target="_blank">GitHub</a>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Let's Connect</div>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-description">
+          I'm always open to discussing new projects, opportunities, or collaborations
+        </p>
       </div>
-    </footer>
 
-  </div>
+      <div class="contact-grid">
+        <a href="mailto:narravenkataraghucharan03@gmail.com" class="contact-card">
+          <span class="contact-icon">📧</span>
+          <h3>Email Me</h3>
+          <p>narravenkataraghucharan03@gmail.com</p>
+        </a>
+
+        <a href="https://github.com/Raghucharan16" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-icon">💻</span>
+          <h3>GitHub</h3>
+          <p>Check out my code and projects</p>
+        </a>
+
+        <a href="https://www.linkedin.com/in/raghu-charan-narra" target="_blank" rel="noopener noreferrer"
+          class="contact-card">
+          <span class="contact-icon">💼</span>
+          <h3>LinkedIn</h3>
+          <p>Connect professionally</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          © 2026 N.V.RaghuCharan. Built with passion, no forms included.
+        </div>
+        <div class="social-links">
+          <a href="mailto:narravenkataraghucharan03@gmail.com" class="social-link" aria-label="Email">📧</a>
+          <a href="https://github.com/Raghucharan16" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="GitHub">💻</a>
+          <a href="https://www.linkedin.com/in/raghu-charan-narra" target="_blank" rel="noopener noreferrer"
+            class="social-link" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <a href="#about" class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</a>
+
+  <script src="static/js/theme.js"></script>
+  <script src="static/js/navigation.js"></script>
+
 </body>
+
 </html>
