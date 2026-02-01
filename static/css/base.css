@@ -1,0 +1,88 @@
+:root {
+  /* Light Mode Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-card: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --accent-primary: #05C274;
+  --accent-secondary: #00A86B;
+  --accent-gradient: linear-gradient(135deg, #05C274 0%, #00D9A3 100%);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.95);
+  --card-bg: linear-gradient(135deg, rgba(5, 194, 116, 0.04) 0%, rgba(0, 217, 163, 0.03) 100%);
+  --skill-category-bg: linear-gradient(135deg, rgba(5, 194, 116, 0.05) 0%, rgba(0, 217, 163, 0.03) 100%);
+  --contact-card-bg: linear-gradient(135deg, rgba(5, 194, 116, 0.1) 0%, rgba(0, 217, 163, 0.08) 100%);
+  --tag-bg: rgba(5, 194, 116, 0.15);
+  --tag-border: rgba(5, 194, 116, 0.3);
+  --tag-text: #047857;
+  --tag-hover-bg: rgba(5, 194, 116, 0.25);
+  --tag-hover-border: rgba(5, 194, 116, 0.5);
+  --btn-secondary-bg: rgba(0, 0, 0, 0.05);
+  --btn-secondary-hover-bg: rgba(0, 0, 0, 0.08);
+  --hero-gradient-1: radial-gradient(ellipse 1400px 800px at 10% 0%, rgba(5, 194, 116, 0.1), transparent);
+  --hero-gradient-2: radial-gradient(ellipse 1000px 600px at 90% 20%, rgba(0, 217, 163, 0.08), transparent);
+}
+
+[data-theme="dark"] {
+  /* Dark Mode Colors */
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #0f1419;
+  --bg-card: #1a1f2e;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --accent-primary: #05C274;
+  --accent-secondary: #00D9A3;
+  --accent-gradient: linear-gradient(135deg, #05C274 0%, #00D9A3 100%);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --nav-bg: rgba(10, 14, 26, 0.8);
+  --nav-bg-scrolled: rgba(10, 14, 26, 0.95);
+  --card-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  --skill-category-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --contact-card-bg: linear-gradient(135deg, rgba(5, 194, 116, 0.1) 0%, rgba(0, 217, 163, 0.08) 100%);
+  --tag-bg: rgba(5, 194, 116, 0.15);
+  --tag-border: rgba(5, 194, 116, 0.25);
+  --tag-text: #34D399;
+  --tag-hover-bg: rgba(5, 194, 116, 0.25);
+  --tag-hover-border: rgba(5, 194, 116, 0.45);
+  --btn-secondary-bg: rgba(255, 255, 255, 0.05);
+  --btn-secondary-hover-bg: rgba(255, 255, 255, 0.08);
+  --hero-gradient-1: radial-gradient(ellipse 1400px 800px at 10% 0%, rgba(5, 194, 116, 0.12), transparent);
+  --hero-gradient-2: radial-gradient(ellipse 1000px 600px at 90% 20%, rgba(0, 217, 163, 0.1), transparent);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--hero-gradient-1), var(--hero-gradient-2), var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
